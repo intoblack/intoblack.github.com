@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 
-        <title>泽仔 - Authors</title>
+        <title>java_hash_code_规则</title>
         <meta charset="utf-8" />
 
 
@@ -43,8 +43,92 @@
               </ul>
             </div>
 
-    <h1>Authors on 泽仔</h1>        <li><a href="/author/ze.html">泽</a> (1)</li>
-        <li><a href="/author/ze-zi.html">泽仔</a> (1)</li>
+<section id="content" class="body">
+
+   <div class="row">
+        <div class="eleven columns">
+
+
+            <header>
+              <h2 class="entry-title">
+                <a href="/java_hash_code_gui-ze-中文.html" rel="bookmark"
+                   title="Permalink to java_hash_code_规则">java_hash_code_规则</a></h2>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2013-12-12T10:06:36">
+                四 12 十二月 2013
+              </abbr>
+              <address class="vcard author">
+                By <a class="url fn" href="/author/ze-zi.html">泽仔</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <h1>java hashcode 规则</h1>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">散列码计算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">boolean</td>
+<td align="left">f ? 1 : 0</td>
+</tr>
+<tr>
+<td align="left">byte/char/short/int</td>
+<td align="left">(int)f</td>
+</tr>
+<tr>
+<td align="left">long</td>
+<td align="left">(int)(f^f(f&gt;&gt;&gt;32))</td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">Float.floatToIntBits(f)</td>
+</tr>
+<tr>
+<td align="left">double</td>
+<td align="left">Double.doubleToLongBits(f) -&gt;(long)</td>
+</tr>
+<tr>
+<td align="left">Arry</td>
+<td align="left">每个元素按照上述操作，做，相加</td>
+</tr>
+</tbody>
+</table>
+<h2>result = 31 * result + c ; //c 上述结果</h2>
+            </div><!-- /.entry-content -->
+
+
+        </div><!-- /.eleven.columns -->
+        
+<div class="three columns">
+
+<h4>Pages</h4>
+
+ <ul>
+  </ul>
+
+<h4>Categories</h4>
+<ul>
+		<li><a href="/category/xue-xi.html">学习</a></li>
+</ul>
+
+
+<h4>Tags</h4>
+	<ul>
+	    <li class="tag-1"><a href="/tag/java.html">java</a></li>
+</ul>
+
+
+
+</div> </div><!-- /.row -->
+
+
+</section>
 
        </div><!-- /.row -->
     </div><!-- /.container -->
