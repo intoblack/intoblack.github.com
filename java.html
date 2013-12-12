@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
 
-        <title>泽仔</title>
+        <title>Java 设计模式</title>
         <meta charset="utf-8" />
 
 
@@ -43,21 +43,28 @@
               </ul>
             </div>
 
-<section id="content">
-
-
+<section id="content" class="body">
 
    <div class="row">
-
-
         <div class="eleven columns">
-		         <ol id="post-list">
-				        <li><article class="hentry">
-				                <header> <h2 class="entry-title"><a href="/java.html" rel="bookmark" title="Permalink to Java 设计模式">Java 设计模式</a></h2> </header>
-				                <footer class="post-info">
-				                    <abbr class="published" title="2013-12-12T08:59:31"> 四 12 十二月 2013 </abbr>
-<address class="vcard author">By <a class="url fn" href="/author/ze.html">泽</a></address>				                </footer><!-- /.post-info -->
-				                <div class="entry-content"> <h2>JAVA BUILDER</h2>
+
+
+            <header>
+              <h2 class="entry-title">
+                <a href="/java.html" rel="bookmark"
+                   title="Permalink to Java 设计模式">Java 设计模式</a></h2>
+           
+            </header>
+            <footer class="post-info">
+              <abbr class="published" title="2013-12-12T08:59:31">
+                四 12 十二月 2013
+              </abbr>
+              <address class="vcard author">
+                By <a class="url fn" href="/author/ze.html">泽</a>
+              </address>
+            </footer><!-- /.post-info -->
+            <div class="entry-content">
+              <h2>JAVA BUILDER</h2>
 <p>:::java</p>
 <div class="highlight"><pre><span class="n">public</span> <span class="n">class</span> <span class="n">TimeStringBuffer</span> <span class="p">{</span>
     <span class="n">private</span> <span class="n">StringBuffer</span> <span class="n">timeBuffer</span> <span class="o">=</span> <span class="n">new</span> <span class="n">StringBuffer</span><span class="p">();</span>
@@ -75,21 +82,13 @@
     <span class="p">}</span>
 
     <span class="n">public</span> <span class="k">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">TimeStringBuffer</span> <span class="n">buffer</span> <span class="o">=</span> <span class="n">new</span> <span class="n">TimeStringBuffer</span><span class="p">();</span> <span class="n">buffer</span><span class="p">.</span><span class="n">setHH ...</span></pre></div> </div><!-- /.entry-content -->
+        <span class="n">TimeStringBuffer</span> <span class="n">buffer</span> <span class="o">=</span> <span class="n">new</span> <span class="n">TimeStringBuffer</span><span class="p">();</span> <span class="n">buffer</span><span class="p">.</span><span class="n">setHH</span><span class="p">().</span><span class="n">setMM</span><span class="p">();</span>
+        <span class="n">System</span><span class="p">.</span><span class="n">out</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">make</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+            </div><!-- /.entry-content -->
 
-								<div class="medium primary btn"><a href="/java.html" rel="bookmark" title="Permalink to Java 设计模式">Read more <i class="icon-arrow-right"></i></a></div>
-
-
-
-								<div class="row tag-row">
-										<span>Tagged as : </span>
-											<a class="danger label" href="/tag/java.html">java</a>
-								</div>
-
-
-
-				        </article></li>
-				</ol><!-- /#posts-list -->
 
         </div><!-- /.eleven.columns -->
         
@@ -115,10 +114,8 @@
 
 </div> </div><!-- /.row -->
 
-<p class="paginator">
-    Page 1 / 1
-</p>
-</section><!-- /#content -->
+
+</section>
 
        </div><!-- /.row -->
     </div><!-- /.container -->
