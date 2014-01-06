@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>码农ing - java</title>
+    <title>java单例模式</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="泽">
@@ -99,12 +99,23 @@
     <div class="container-fluid">
       <div class="row">
         <div class="span9" id="content">
-        <div class="article">
-                <h1><a href="/post/2014-01-07-java 零拷贝/">java 零拷贝(zero copy)</a></h1>
-                <div class="well small"><footer class="post-info">
+<section id="content">
+        <article>
+                <header>
+                        <h1>
+                                <a href=""
+                                        rel="bookmark"
+                                        title="Permalink to java单例模式">
+                                        java单例模式
+                                </a>
+                        </h1>
+                </header>
+                <div class="entry-content">
+                <div class="well">
+<footer class="post-info">
 <span class="label">Date</span>
-<abbr class="published" title="2014-01-07T00:26:35">
-        <i class="icon-calendar"></i>二 07 一月 2014
+<abbr class="published" title="2013-12-29T11:53:55">
+        <i class="icon-calendar"></i>日 29 十二月 2013
 </abbr>
 <span class="label">By</span>
 <a href="/author/ze.html"><i class="icon-user"></i>泽</a>
@@ -113,81 +124,79 @@
 
 
 <span class="label">Tags</span>
-	<a href="/tag/java.html"><i class="icon-tag"></i>java</a>
-	<a href="/tag/ji-zhu.html"><i class="icon-tag"></i>技术</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>java zero copy</p>
-                        <a class="btn primary xsmall" href="/post/2014-01-07-java 零拷贝/">more ...</a>
-                </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/java pattern-zh.html">java 工厂模式</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2014-01-03T10:35:20">
-        <i class="icon-calendar"></i>五 03 一月 2014
-</abbr>
-<span class="label">By</span>
-<a href="/author/ze.html"><i class="icon-user"></i>泽</a>
-<span class="label">Category</span>
-<a href="/category/java.html"><i class="icon-folder-open"></i>java</a>.
+	<a href="/tag/java-she-ji-mo-shi.html"><i class="icon-tag"></i>java 设计模式</a>
+<span class="label">Lang</span>
+	<a href="/post/2013-12-12-java/"><i class="icon-edit"></i>zhs</a>
+</footer><!-- /.post-info -->                </div>
+                <h1>单例模式</h1>
+<p>单例模式是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例类的特殊类。通过单例模式可以保证系统中一个类只有一个实例而且该实例易于外界访问，从而方便对实例个数的控制并节约系统资源。如果希望在系统中某个类的对象只能存在一个，单例模式是最好的解决方案。<br />
+<em>节省资源
+</em>唯一性  </p>
+<p>:::java  </p>
+<div class="highlight"><pre>   <span class="c1">//</span>
+   <span class="n">public</span> <span class="n">class</span> <span class="n">JavaInstance</span> <span class="p">{</span>
+          <span class="n">private</span> <span class="k">static</span> <span class="n">JavaInstance</span> <span class="o">=</span> <span class="n">null</span><span class="p">;</span> <span class="c1">//设置单例模式句柄为null</span>
+
+          <span class="n">private</span> <span class="nf">JavaInstance</span><span class="p">()</span>
+          <span class="p">{</span>
+               <span class="c1">//私有化初始函数</span>
+          <span class="p">}</span>
+
+          <span class="n">public</span> <span class="k">static</span> <span class="nf">getInstance</span><span class="p">()</span>
+          <span class="p">{</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">instance</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span> <span class="c1">//第一次判断是否为空</span>
+                <span class="p">{</span>  
+                    <span class="n">synchronized</span><span class="p">(</span><span class="n">JavaInstance</span><span class="p">.</span><span class="n">class</span><span class="p">)</span><span class="c1">//锁住类 多线程同步问题</span>
+                    <span class="p">{</span>
+                          <span class="k">if</span><span class="p">(</span><span class="n">instance</span> <span class="o">==</span> <span class="n">null</span><span class="p">)</span>
+                          <span class="p">{</span>
+                               <span class="n">instance</span> <span class="o">=</span> <span class="n">new</span> <span class="n">JavaInstance</span><span class="p">();</span> <span class="c1">//调用私有构造函数初始化</span>
+                          <span class="p">}</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">return</span> <span class="n">instance</span><span class="p">;</span><span class="c1">//返回单例句柄</span>
+          <span class="p">}</span>
 
 
-<span class="label">Tags</span>
-	<a href="/tag/java.html"><i class="icon-tag"></i>java</a>
-	<a href="/tag/she-ji-mo-shi.html"><i class="icon-tag"></i>设计模式</a>
-	<a href="/tag/gong-han.html"><i class="icon-tag"></i>工厂</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>java 设计模式</p>
-                        <a class="btn primary xsmall" href="/java pattern-zh.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/java patterns-zh.html">java 设计模式原则</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2014-01-03T10:22:04">
-        <i class="icon-calendar"></i>五 03 一月 2014
-</abbr>
-<span class="label">By</span>
-<a href="/author/ze.html"><i class="icon-user"></i>泽</a>
-<span class="label">Category</span>
-<a href="/category/java.html"><i class="icon-folder-open"></i>java</a>.
+
+          <span class="n">public</span> <span class="kt">void</span> <span class="nf">work</span><span class="p">()</span>
+          <span class="p">{</span>
+              <span class="c1">//do something</span>
+          <span class="p">}</span>
+   <span class="p">}</span>
+</pre></div>
 
 
-<span class="label">Tags</span>
-	<a href="/tag/java.html"><i class="icon-tag"></i>java</a>
-	<a href="/tag/she-ji-mo-shi.html"><i class="icon-tag"></i>设计模式</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>java design</p>
-                        <a class="btn primary xsmall" href="/java patterns-zh.html">more ...</a>
-                </div>
-        </div>
-        <hr />
-        <div class="article">
-                <h1><a href="/post/2013-12-12-java_hash_code_/">java_hash_code_rule</a></h1>
-                <div class="well small"><footer class="post-info">
-<span class="label">Date</span>
-<abbr class="published" title="2013-12-12T10:06:36">
-        <i class="icon-calendar"></i>四 12 十二月 2013
-</abbr>
-<span class="label">By</span>
-<a href="/author/ze-zi.html"><i class="icon-user"></i>泽仔</a>
-<span class="label">Category</span>
-<a href="/category/java.html"><i class="icon-folder-open"></i>java</a>.
+<p>:::java</p>
+<div class="highlight"><pre>   <span class="c1">//枚举类型 可以避免多线程同步问题 ，防止反序列化重新创建新的对象</span>
+   <span class="n">public</span> <span class="k">enum</span> <span class="nf">JavaInstance</span><span class="p">(){</span>
+        <span class="n">INSTANCE</span><span class="p">;</span>
+
+        <span class="n">private</span> <span class="n">JavaInstance</span><span class="p">(){</span>
+        <span class="c1">//初始化</span>
+        <span class="p">}</span>
+   <span class="p">}</span>
+</pre></div>
 
 
-<span class="label">Tags</span>
-	<a href="/tag/java.html"><i class="icon-tag"></i>java</a>
-</footer><!-- /.post-info --></div>
-                <div class="summary"><p>介绍java hash code 计算规则</p>
-                        <a class="btn primary xsmall" href="/post/2013-12-12-java_hash_code_/">more ...</a>
-                </div>
-        </div>
-        <hr />
+<p>:::java  </p>
+<div class="highlight"><pre>   <span class="c1">//最简单的方式</span>
+   <span class="n">public</span> <span class="n">class</span> <span class="nf">JavaInstance</span><span class="p">(){</span>
+        <span class="n">private</span> <span class="k">static</span> <span class="n">JavaInstance</span> <span class="n">instance</span> <span class="o">=</span> <span class="n">new</span> <span class="n">JavaInstance</span><span class="p">();</span>
+        <span class="n">private</span> <span class="n">JavaInstance</span><span class="p">()</span>
+        <span class="p">{</span>
+           <span class="c1">//初始化 </span>
+        <span class="p">}</span>
 
+        <span class="n">public</span> <span class="k">static</span> <span class="n">getInstance</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="k">return</span> <span class="n">instance</span><span class="p">;</span>
+        <span class="p">}</span>
+   <span class="p">}</span>
+</pre></div>
+                </div><!-- /.entry-content -->
+        </article>
+</section>
         </div><!--/span-->
 
                 <div class="span3 well sidebar-nav" id="sidebar">
