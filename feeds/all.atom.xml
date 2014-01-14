@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>码农ing</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-01-13T15:21:38+08:00</updated><entry><title>java 策略模式</title><link href="/java%20,%20%20%E7%AD%96%E7%95%A5-zh.html" rel="alternate"></link><updated>2014-01-13T15:21:38+08:00</updated><author><name>泽</name></author><id>tag:,2014-01-13:java ,  策略-zh.html</id><summary type="html">&lt;h1&gt;java 策略模式&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>码农ing</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-01-14T17:23:31+08:00</updated><entry><title>python ssh 远程链接代码</title><link href="/python%20ssh-zh.html" rel="alternate"></link><updated>2014-01-14T17:23:31+08:00</updated><author><name>泽</name></author><id>tag:,2014-01-14:python ssh-zh.html</id><summary type="html">&lt;h2&gt;使用python  ssh 代码实现&lt;/h2&gt;
+&lt;p&gt;:::python &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;utf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;
+    &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="o"&gt;!/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;
+
+    &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;paramiko&lt;/span&gt;
+    &lt;span class="n"&gt;client&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SSHClient&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_missing_host_key_policy&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;paramiko&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;AutoAddPolicy&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ip&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;端口&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;用户名&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;用户密码&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;链接超时时间&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;zyl&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;22&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;username&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;zyl&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;stdin&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;exec_command&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;ls&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readlines&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+    &lt;span class="n"&gt;client&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;ssh&lt;/h2&gt;
+&lt;p&gt;一款在linux 远程链接服务器工具  ,python 是一门较容易学习的语言  &lt;/p&gt;</summary><category term="python"></category><category term="技术"></category><category term="ssh"></category></entry><entry><title>java 策略模式</title><link href="/java%20,%20%20%E7%AD%96%E7%95%A5-zh.html" rel="alternate"></link><updated>2014-01-13T15:21:38+08:00</updated><author><name>泽</name></author><id>tag:,2014-01-13:java ,  策略-zh.html</id><summary type="html">&lt;h1&gt;java 策略模式&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;动态的改变对象的行为  &lt;/li&gt;
 &lt;li&gt;可以组合调整类的表现方式  &lt;/li&gt;
@@ -524,7 +542,7 @@
 
             &lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;abstract&lt;/span&gt; &lt;span class="n"&gt;E&lt;/span&gt; &lt;span class="nf"&gt;getMethodResult&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;U&lt;/span&gt; &lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="java 设计模式"></category></entry><entry><title>java单例模式</title><link href="/java-zh.html" rel="alternate"></link><updated>2013-12-29T11:53:55+08:00</updated><author><name>泽</name></author><id>tag:,2013-12-29:java-zh.html</id><summary type="html">&lt;h1&gt;单例模式&lt;/h1&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="java"></category><category term="设计模式"></category></entry><entry><title>java单例模式</title><link href="/java-zh.html" rel="alternate"></link><updated>2013-12-29T11:53:55+08:00</updated><author><name>泽</name></author><id>tag:,2013-12-29:java-zh.html</id><summary type="html">&lt;h1&gt;单例模式&lt;/h1&gt;
 &lt;p&gt;单例模式是一种常用的软件设计模式。在它的核心结构中只包含一个被称为单例类的特殊类。通过单例模式可以保证系统中一个类只有一个实例而且该实例易于外界访问，从而方便对实例个数的控制并节约系统资源。如果希望在系统中某个类的对象只能存在一个，单例模式是最好的解决方案。&lt;br /&gt;
 &lt;em&gt;节省资源
 &lt;/em&gt;唯一性  &lt;/p&gt;
@@ -589,7 +607,7 @@
             &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;instance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
         &lt;span class="p"&gt;}&lt;/span&gt;
    &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="java 设计模式"></category></entry><entry><title>生活的真理</title><link href="/%E7%9C%9F%E7%90%86-%E4%B8%AD%E6%96%87.html" rel="alternate"></link><updated>2013-12-12T10:41:33+08:00</updated><author><name>泽</name></author><id>tag:,2013-12-12:真理-中文.html</id><summary type="html">&lt;h1&gt;真正的道理&lt;/h1&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="java"></category><category term="设计模式"></category></entry><entry><title>生活的真理</title><link href="/%E7%9C%9F%E7%90%86-%E4%B8%AD%E6%96%87.html" rel="alternate"></link><updated>2013-12-12T10:41:33+08:00</updated><author><name>泽</name></author><id>tag:,2013-12-12:真理-中文.html</id><summary type="html">&lt;h1&gt;真正的道理&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;你可以选择做官，你也可以选择挣钱，但你不能选择通过做官来挣钱;你可以选择做圣人，也可以选择做俗人，但你不能选择让大家像圣人一样崇拜你，还要像俗人一样原谅你。只想要权力不想要约束是恶霸，只想要享受不想尽义务是流氓。    &lt;/li&gt;
 &lt;/ul&gt;</summary><category term="真理"></category></entry><entry><title>java_hash_code_rule</title><link href="/post/2013-12-12-java_hash_code_/" rel="alternate"></link><updated>2013-12-12T10:06:36+08:00</updated><author><name>泽仔</name></author><id>tag:,2013-12-12:post/2013-12-12-java_hash_code_/</id><summary type="html">&lt;h1&gt;java hashcode 规则&lt;/h1&gt;
@@ -627,7 +645,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2&gt;result = 31 * result + c ; //c 上述结果&lt;/h2&gt;</summary><category term="java"></category></entry><entry><title>Java,设计模式</title><link href="/post/2013-12-12-java/" rel="alternate"></link><updated>2013-12-12T08:59:31+08:00</updated><author><name>泽</name></author><id>tag:,2013-12-12:post/2013-12-12-java/</id><summary type="html">&lt;h2&gt;JAVA BUILDER&lt;/h2&gt;
+&lt;h2&gt;result = 31 * result + c ; //c 上述结果&lt;/h2&gt;</summary><category term="java"></category></entry><entry><title>Java Builder</title><link href="/post/2013-12-12-java/" rel="alternate"></link><updated>2013-12-12T08:59:31+08:00</updated><author><name>泽</name></author><id>tag:,2013-12-12:post/2013-12-12-java/</id><summary type="html">&lt;h2&gt;JAVA BUILDER&lt;/h2&gt;
 &lt;p&gt;:::java&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;public&lt;/span&gt; &lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;TimeStringBuffer&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="n"&gt;private&lt;/span&gt; &lt;span class="n"&gt;StringBuffer&lt;/span&gt; &lt;span class="n"&gt;timeBuffer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;new&lt;/span&gt; &lt;span class="n"&gt;StringBuffer&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
@@ -647,4 +665,4 @@
         &lt;span class="n"&gt;System&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;out&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;println&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;buffer&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;make&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
     &lt;span class="p"&gt;}&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="java"></category></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Java"></category></entry></feed>
