@@ -116,7 +116,34 @@
 	<a href="/tag/java.html"><i class="icon-tag"></i>java</a>
 	<a href="/tag/she-ji-mo-shi.html"><i class="icon-tag"></i>设计模式</a>
 </footer><!-- /.post-info --></div>
-                <div class="summary"><p>java 观察者设计模式</p>
+                <div class="summary"><h1>java 观察者</h1>
+<p>:::java  </p>
+<div class="highlight"><pre>    <span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">LinkedHashMap</span><span class="p">;</span>
+    <span class="n">import</span> <span class="n">java</span><span class="p">.</span><span class="n">util</span><span class="p">.</span><span class="n">Map</span><span class="p">;</span>
+
+    <span class="n">import</span> <span class="n">org</span><span class="p">.</span><span class="n">apache</span><span class="p">.</span><span class="n">log4j</span><span class="p">.</span><span class="n">Logger</span><span class="p">;</span>
+
+
+
+
+    <span class="cm">/**</span>
+<span class="cm">    *注册者 </span>
+<span class="cm">    *</span>
+<span class="cm">    *</span>
+<span class="cm">    *</span>
+<span class="cm">    */</span>
+    <span class="n">public</span> <span class="n">abstract</span> <span class="n">class</span> <span class="n">ControlerMethod</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span><span class="n">U</span><span class="o">&gt;</span> <span class="p">{</span>
+
+            <span class="n">private</span> <span class="k">static</span> <span class="n">final</span> <span class="n">Logger</span> <span class="n">logger</span> <span class="o">=</span> <span class="n">Logger</span><span class="p">.</span><span class="n">getLogger</span><span class="p">(</span><span class="n">ControlerMethod</span><span class="p">.</span><span class="n">class</span><span class="p">);</span>
+            <span class="c1">// 存储搜索接口的map</span>
+            <span class="n">protected</span> <span class="n">Map</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;</span> <span class="n">methoMap</span> <span class="o">=</span> <span class="n">new</span> <span class="n">LinkedHashMap</span><span class="o">&lt;</span><span class="n">String</span><span class="p">,</span> <span class="n">T</span><span class="o">&gt;</span><span class="p">();</span>
+
+            <span class="cm">/**</span>
+<span class="cm">             * 添加使用的接口</span>
+<span class="cm">             * </span>
+<span class="cm">             * @param bookSearch</span>
+<span class="cm">             *            搜索接口</span>
+<span class="cm">             * @return true 添加 ...</span></pre></div>
                         <a class="btn primary xsmall" href="/java obsever-zh.html">more ...</a>
                 </div>
         </div>
@@ -137,7 +164,42 @@
 <span class="label">Tags</span>
 	<a href="/tag/java.html"><i class="icon-tag"></i>java</a>
 </footer><!-- /.post-info --></div>
-                <div class="summary"><p>介绍java hash code 计算规则</p>
+                <div class="summary"><h1>java hashcode 规则</h1>
+<table>
+<thead>
+<tr>
+<th align="left">类型</th>
+<th align="left">散列码计算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">boolean</td>
+<td align="left">f ? 1 : 0</td>
+</tr>
+<tr>
+<td align="left">byte/char/short/int</td>
+<td align="left">(int)f</td>
+</tr>
+<tr>
+<td align="left">long</td>
+<td align="left">(int)(f^f(f&gt;&gt;&gt;32))</td>
+</tr>
+<tr>
+<td align="left">float</td>
+<td align="left">Float.floatToIntBits(f)</td>
+</tr>
+<tr>
+<td align="left">double</td>
+<td align="left">Double.doubleToLongBits(f) -&gt;(long)</td>
+</tr>
+<tr>
+<td align="left">Arry</td>
+<td align="left">每个元素按照上述操作，做，相加</td>
+</tr>
+</tbody>
+</table>
+<h2>result = 31 * result + c ; //c 上述结果</h2>
                         <a class="btn primary xsmall" href="/post/2013-12-12-java_hash_code_/">more ...</a>
                 </div>
         </div>
@@ -177,14 +239,24 @@
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
+<li class="tag-1">
+    <a href="/tag/she-ji-mo-shi.html">
+        <i class="icon-tag icon-large"></i>设计模式
+    </a>
+</li>
 <li class="tag-2">
     <a href="/tag/ji-zhu.html">
         <i class="icon-tag icon-large"></i>技术
     </a>
 </li>
-<li class="tag-1">
-    <a href="/tag/she-ji-mo-shi.html">
-        <i class="icon-tag icon-large"></i>设计模式
+<li class="tag-4">
+    <a href="/tag/ssh.html">
+        <i class="icon-tag icon-large"></i>ssh
+    </a>
+</li>
+<li class="tag-4">
+    <a href="/tag/zhen-li.html">
+        <i class="icon-tag icon-large"></i>真理
     </a>
 </li>
 <li class="tag-1">
@@ -198,18 +270,8 @@
     </a>
 </li>
 <li class="tag-4">
-    <a href="/tag/ssh.html">
-        <i class="icon-tag icon-large"></i>ssh
-    </a>
-</li>
-<li class="tag-4">
     <a href="/tag/python.html">
         <i class="icon-tag icon-large"></i>python
-    </a>
-</li>
-<li class="tag-4">
-    <a href="/tag/zhen-li.html">
-        <i class="icon-tag icon-large"></i>真理
     </a>
 </li>
 
