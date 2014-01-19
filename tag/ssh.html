@@ -117,19 +117,7 @@
 	<a href="/tag/ji-zhu.html"><i class="icon-tag"></i>技术</a>
 	<a href="/tag/ssh.html"><i class="icon-tag"></i>ssh</a>
 </footer><!-- /.post-info --></div>
-                <div class="summary"><h2>使用python  ssh 代码实现</h2>
-<p>:::python </p>
-<div class="highlight"><pre>    <span class="err">#</span><span class="n">coding</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
-    <span class="err">#</span><span class="o">!/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">env</span> <span class="n">python</span>
-
-    <span class="n">import</span> <span class="n">paramiko</span>
-    <span class="n">client</span> <span class="o">=</span> <span class="n">paramiko</span><span class="p">.</span><span class="n">SSHClient</span><span class="p">()</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">set_missing_host_key_policy</span><span class="p">(</span><span class="n">paramiko</span><span class="p">.</span><span class="n">AutoAddPolicy</span><span class="p">())</span>
-    <span class="err">#</span><span class="n">client</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="n">ip</span> <span class="p">,</span> <span class="err">端口</span> <span class="p">,</span> <span class="err">用户名</span> <span class="p">,</span> <span class="err">用户密码</span> <span class="p">,</span> <span class="err">链接超时时间</span> <span class="p">)</span>
-    <span class="n">client</span><span class="p">.</span><span class="n">connect</span><span class="p">(</span><span class="err">&#39;</span><span class="n">zyl</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="n">username</span><span class="o">=</span><span class="err">&#39;</span><span class="n">zyl</span><span class="err">&#39;</span><span class="p">,</span> <span class="n">password</span><span class="o">=</span><span class="sc">&#39;1&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
-    <span class="n">stdin</span><span class="p">,</span> <span class="n">stdout</span><span class="p">,</span> <span class="n">stderr</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">exec_command</span><span class="p">(</span><span class="err">&#39;</span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span><span class="err">&#39;</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">std</span> <span class="n">in</span> <span class="n">stdout</span><span class="p">.</span><span class="n">readlines</span><span class="p">()</span><span class="o">:</span>
-        <span class="n">print ...</span></pre></div>
+                <div class="summary"><p>python 技术 ssh</p>
                         <a class="btn primary xsmall" href="/python ssh-zh.html">more ...</a>
                 </div>
         </div>
@@ -169,29 +157,9 @@
 </li>
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
-<li class="tag-1">
-    <a href="/tag/she-ji-mo-shi.html">
-        <i class="icon-tag icon-large"></i>设计模式
-    </a>
-</li>
-<li class="tag-2">
-    <a href="/tag/ji-zhu.html">
-        <i class="icon-tag icon-large"></i>技术
-    </a>
-</li>
-<li class="tag-4">
-    <a href="/tag/ssh.html">
-        <i class="icon-tag icon-large"></i>ssh
-    </a>
-</li>
 <li class="tag-4">
     <a href="/tag/zhen-li.html">
         <i class="icon-tag icon-large"></i>真理
-    </a>
-</li>
-<li class="tag-1">
-    <a href="/tag/java.html">
-        <i class="icon-tag icon-large"></i>java
     </a>
 </li>
 <li class="tag-4">
@@ -200,8 +168,33 @@
     </a>
 </li>
 <li class="tag-4">
+    <a href="/tag/ssh.html">
+        <i class="icon-tag icon-large"></i>ssh
+    </a>
+</li>
+<li class="tag-2">
+    <a href="/tag/ji-zhu.html">
+        <i class="icon-tag icon-large"></i>技术
+    </a>
+</li>
+<li class="tag-4">
     <a href="/tag/python.html">
         <i class="icon-tag icon-large"></i>python
+    </a>
+</li>
+<li class="tag-1">
+    <a href="/tag/java.html">
+        <i class="icon-tag icon-large"></i>java
+    </a>
+</li>
+<li class="tag-4">
+    <a href="/tag/jia-gou.html">
+        <i class="icon-tag icon-large"></i>架构
+    </a>
+</li>
+<li class="tag-1">
+    <a href="/tag/she-ji-mo-shi.html">
+        <i class="icon-tag icon-large"></i>设计模式
     </a>
 </li>
 

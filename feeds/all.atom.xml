@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>码农ing</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-01-14T17:23:31+08:00</updated><entry><title>python ssh 远程链接代码</title><link href="/python%20ssh-zh.html" rel="alternate"></link><updated>2014-01-14T17:23:31+08:00</updated><author><name>泽</name></author><id>tag:,2014-01-14:python ssh-zh.html</id><summary type="html">&lt;h2&gt;使用python  ssh 代码实现&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>码农ing</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-01-19T19:58:59+08:00</updated><entry><title>爬虫设计</title><link href="/post/2014-01-19-spider%20design/" rel="alternate"></link><updated>2014-01-19T19:58:59+08:00</updated><author><name>泽仔</name></author><id>tag:,2014-01-19:post/2014-01-19-spider design/</id><summary type="html">&lt;h1&gt;一个分布式爬虫的设计&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;设计一个可以分布式爬取网站的爬虫&lt;/li&gt;
+&lt;li&gt;设计流程&lt;/li&gt;
+&lt;li&gt;设计一个简单的架构&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;爬虫逻辑流程图&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="spiderprocess" src="/images/spider_liucheng.png" /&gt;&lt;/p&gt;</summary><category term="架构"></category></entry><entry><title>python ssh 远程链接代码</title><link href="/python%20ssh-zh.html" rel="alternate"></link><updated>2014-01-14T17:23:31+08:00</updated><author><name>泽</name></author><id>tag:,2014-01-14:python ssh-zh.html</id><summary type="html">&lt;h2&gt;使用python  ssh 代码实现&lt;/h2&gt;
 &lt;p&gt;:::python &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="n"&gt;coding&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;utf&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;
     &lt;span class="err"&gt;#&lt;/span&gt;&lt;span class="o"&gt;!/&lt;/span&gt;&lt;span class="n"&gt;usr&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;bin&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;env&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;
