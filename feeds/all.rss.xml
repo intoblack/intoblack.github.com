@@ -13,7 +13,7 @@
 &lt;ul&gt;
 &lt;li&gt;基于广度遍历网页 （设置层数限制）&lt;/li&gt;
 &lt;li&gt;利用redis 实现爬虫队列(先进后出 lpush , rpop)&lt;/li&gt;
-&lt;li&gt;利用redis bloomfilter 验证是否爬取网址(速度快 ， 分布式 ， 缺点 ： 有容错率 , 但是网络爬虫可以容忍这个问题)&lt;/li&gt;
+&lt;li&gt;利用redis bloomfilter 验证是否爬取网址(速度快 ， 分布式 ， 缺点 ： 有容错率 , 但是网络爬虫可以容忍这个问题)   &lt;a href="https://github.com/intoblack/cgame/blob/master/code/bitmap.c"&gt;bloomfilter  原理&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;文件写入方式 ， 基于 队列 ， 定时刷新文件&lt;/li&gt;
 &lt;li&gt;利用谷歌goaget ，访问，被墙页面 （技术自己搜）&lt;/li&gt;
 &lt;/ul&gt;
