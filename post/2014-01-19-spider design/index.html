@@ -134,6 +134,24 @@
 </ul>
 <h2>爬虫逻辑流程图</h2>
 <p><img alt="spiderprocess" src="/images/spider_liucheng.png" /></p>
+<h2>爬虫架构图</h2>
+<p><img alt="spiderprocess" src="/images/spider_design.png" /></p>
+<h2>设计逻辑</h2>
+<ul>
+<li>基于广度遍历网页 （设置层数限制）</li>
+<li>利用redis 实现爬虫队列(先进后出 lpush , rpop)</li>
+<li>利用redis bloomfilter 验证是否爬取网址(速度快 ， 分布式 ， 缺点 ： 有容错率 , 但是网络爬虫可以容忍这个问题)</li>
+<li>文件写入方式 ， 基于 队列 ， 定时刷新文件</li>
+<li>利用谷歌goaget ，访问，被墙页面 （技术自己搜）</li>
+</ul>
+<h2>扩展</h2>
+<ul>
+<li>因为深度遍历网页时 ， 通过获取 a href, 会存在pdf等网页杂音 ， 必须滤过 </li>
+<li>基于论坛 ， 可以先遍历 ， 主网页 ， 获得每个分论坛页面url ， 在获取 每个网页分论坛的网址 ， 提高网页爬虫利用率</li>
+<li>分布式爬取 ， 就是利用了redis ， 实现队列 ，而使每个爬虫客户端可以不用管其他爬虫 ，redis分布式，避免原来瓶颈是主服务器</li>
+</ul>
+<h2>总结</h2>
+<p>设计流程 ， 编写主流程代码 ， 大约三小时，满足基本需求 ， 因为特定需求，设计的</p>
                 </div><!-- /.entry-content -->
         </article>
 </section>
@@ -172,33 +190,13 @@
 
 <li class="nav-header"><h4><i class="icon-tags icon-large"></i>Tags</h4></li>
 <li class="tag-4">
-    <a href="/tag/ssh.html">
-        <i class="icon-tag icon-large"></i>ssh
+    <a href="/tag/python.html">
+        <i class="icon-tag icon-large"></i>python
     </a>
 </li>
 <li class="tag-4">
     <a href="/tag/jia-gou.html">
         <i class="icon-tag icon-large"></i>架构
-    </a>
-</li>
-<li class="tag-4">
-    <a href="/tag/zhen-li.html">
-        <i class="icon-tag icon-large"></i>真理
-    </a>
-</li>
-<li class="tag-4">
-    <a href="/tag/gong-han.html">
-        <i class="icon-tag icon-large"></i>工厂
-    </a>
-</li>
-<li class="tag-4">
-    <a href="/tag/python.html">
-        <i class="icon-tag icon-large"></i>python
-    </a>
-</li>
-<li class="tag-2">
-    <a href="/tag/ji-zhu.html">
-        <i class="icon-tag icon-large"></i>技术
     </a>
 </li>
 <li class="tag-1">
@@ -209,6 +207,26 @@
 <li class="tag-1">
     <a href="/tag/java.html">
         <i class="icon-tag icon-large"></i>java
+    </a>
+</li>
+<li class="tag-4">
+    <a href="/tag/ssh.html">
+        <i class="icon-tag icon-large"></i>ssh
+    </a>
+</li>
+<li class="tag-4">
+    <a href="/tag/zhen-li.html">
+        <i class="icon-tag icon-large"></i>真理
+    </a>
+</li>
+<li class="tag-2">
+    <a href="/tag/ji-zhu.html">
+        <i class="icon-tag icon-large"></i>技术
+    </a>
+</li>
+<li class="tag-4">
+    <a href="/tag/gong-han.html">
+        <i class="icon-tag icon-large"></i>工厂
     </a>
 </li>
 
